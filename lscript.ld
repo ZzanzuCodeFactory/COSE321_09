@@ -166,6 +166,13 @@ SECTIONS
    __csd_mmu_tbl_end = .;
 } > ps7_ram_0_S_AXI_BASEADDR
 
+.csd_mmu_tbl_lv2 (ALIGN(1024)) : {
+   __csd_mmu_tbl_lv2_start = .;
+   *(.csd_mmu_tbl_lv2)
+   __csd_mmu_tbl_lv2_end = .;
+} > ps7_ram_0_S_AXI_BASEADDR
+
+
 .ARM.exidx : {
    __exidx_start = .;
    *(.ARM.exidx*)
